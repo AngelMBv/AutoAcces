@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap1.min.css">
+    <title>Document</title>
+<html>
+<head>
+    <title>Personal Pronouns</title>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+.logo-auto {
+  color: orange;
+}
+
+.logo-acces {
+  color: #000;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: border-bottom 0.3s;
+  position: relative;
+}
+
+.menu li a:hover {
+  border-bottom: 2px solid orange;
+}
+
+.content {
+  padding: 20px;
+}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #d3d3d3;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+        .title {
+            background-color: rgb(255, 119, 0);
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .title-h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+    
+        h2 {
+            color: #3498db;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+        #openModalBtn {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    #openModalBtn:hover {
+        background-color: #007BFF;
+    }
+              /* Modal Styles */
+              .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%; /* Cambia el ancho aquí, por ejemplo, al 30% */
+        }
+
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #activity {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .pronoun-select {
+            padding: 5px;
+        }
+
+        #checkAnswersBtn {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #checkAnswersBtn:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><span class="logo-auto">Auto</span><span class="logo-acces">Acces</span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#">Games</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+       <div class="title">
+        <h1>Personal Pronouns</h1>
+       </div>
+
+        <p>Personal pronouns are words used in place of a noun to avoid repetition of the same name or to refer to a person, animal, object or entity without having to mention its full name. These pronouns are essential in communication, since they facilitate the fluency and clarity of language. Personal pronouns are divided into several categories based on their function and gender.</p>
+
+        <table>
+            <tr>
+                <th>Subject Pronouns</th>
+                <th>Translation in Spanish</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>I</strong></td>
+                <td>Yo</td>
+                <td><strong>I</strong> am a student.</td>
+            </tr>
+            <tr>
+                <td><strong>You</strong></td>
+                <td>Tú, Usted</td>
+                <td><strong>You</strong> are my friend.</td>
+            </tr>
+            <tr>
+                <td><strong>He</strong></td>
+                <td>Él</td>
+                <td><strong>He</strong> is a doctor.</td>
+            </tr>
+            <tr>
+                <td><strong>She</strong></td>
+                <td>Ella</td>
+                <td><strong>She</strong> loves music.</td>
+            </tr>
+            <tr>
+                <td><strong>It</strong></td>
+                <td>Ello (neutro)</td>
+                <td><strong>It</strong> is a cat.</td>
+            </tr>
+            <tr>
+                <td><strong>We</strong></td>
+                <td>Nosotros</td>
+                <td><strong>We</strong> are students.</td>
+            </tr>
+            <tr>
+                <td><strong>They</strong></td>
+                <td>Ellos, Ellas</td>
+                <td><strong>They</strong> are friends.</td>
+            </tr>
+            <tr>
+                <th>Object Pronouns</th>
+                <th>Translation in Spanish</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><strong>Me</strong></td>
+                <td>Me</td>
+                <td>He called <strong>me</strong>.</td>
+            </tr>
+            <tr>
+                <td><strong>Him</strong></td>
+                <td>Él (object)</td>
+                <td>I saw <strong>him</strong> yesterday.</td>
+            </tr>
+            <tr>
+                <td><strong>Her</strong></td>
+                <td>Ella (object)</td>
+                <td>I gave <strong>her</strong> a gift.</td>
+            </tr>
+            <tr>
+                <td><strong>Us</strong></td>
+                <td>Nos (object)</td>
+                <td>They invited <strong>us</strong> to the party.</td>
+            </tr>
+            <tr>
+                <td><strong>Them</strong></td>
+                <td>Ellos (object)</td>
+                <td>We met <strong>them</strong> at the park.</td>
+            </tr>
+        </table>
+        <center>
+        <div class="container">
+            <h1>Personal Pronouns</h1>
+            <button id="openModalBtn">Open Activity</button>
+        </div>
+    </center>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <div id="activity">
+                <h2>Complete the Sentences</h2>
+                <div class="question">
+                    1. <select class="pronoun-select" id="pronoun1">
+                        <option></option>
+                        <option value="us">us</option>
+                        <option value="she">she</option>
+                        <option value="they">they</option>
+                    </select> is a doctor.
+                    <span class="result" id="result1"></span>
+                </div>
+                <div class="question">
+                    2. Can <select class="pronoun-select" id="pronoun2">
+                        <option></option>
+                        <option value="you">you</option>
+                        <option value="him">him</option>
+                        <option value="they">they</option>
+                    </select> come to the party?
+                    <span class="result" id="result2"></span>
+                </div>
+                <div class="question">
+                    3. This is for <select class="pronoun-select" id="pronoun3">
+                        <option></option>
+                        <option value="you">you</option>
+                        <option value="us">us</option>
+                        <option value="they">they</option>
+                    </select>.
+                    <span class="result" id="result3"></span>
+                </div>
+                <button class="check-button" id="checkAnswersBtn">Check Answers</button>
+            </div>
+            <!-- Add this div for the result message -->
+<div id="resultMessage" class="result-message"></div>
+
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModalBtn");
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("closeModalBtn");
+        // Get the check answers button
+        var checkBtn = document.getElementById("checkAnswersBtn");
+        // Get the selects
+        var pronoun1 = document.getElementById("pronoun1");
+        var pronoun2 = document.getElementById("pronoun2");
+        var pronoun3 = document.getElementById("pronoun3");
+        // Get the result elements
+        var result1 = document.getElementById("result1");
+        var result2 = document.getElementById("result2");
+        var result3 = document.getElementById("result3");
+        // Get the result message element
+        var resultMessage = document.getElementById("resultMessage");
+      
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+      
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+          // Reset select values to default (empty option)
+          pronoun1.value = "";
+          pronoun2.value = "";
+          pronoun3.value = "";
+          // Remove result messages
+          result1.textContent = "";
+          result2.textContent = "";
+          result3.textContent = "";
+          // Remove result styles
+          result1.classList.remove("correct", "incorrect");
+          result2.classList.remove("correct", "incorrect");
+          result3.classList.remove("correct", "incorrect");
+          // Clear the result message
+          resultMessage.textContent = "";
+          resultMessage.classList.remove("correct", "incorrect");
+        }
+      
+        // When the user clicks the "Check Answers" button
+        checkBtn.onclick = function() {
+          // Check answers and display results
+          if (pronoun1.value.toLowerCase() === "she") {
+            result1.textContent = '✔️'; // Emoji "✔️" (Palomita verde)
+            result1.classList.add("correct");
+          } else {
+            result1.textContent = '❌'; // Emoji "❌" (X roja)
+            result1.classList.add("incorrect");
+          }
+      
+          if (pronoun2.value.toLowerCase() === "they") {
+            result2.textContent = '✔️'; // Emoji "✔️" (Palomita verde)
+            result2.classList.add("correct");
+          } else {
+            result2.textContent = '❌'; // Emoji "❌" (X roja)
+            result2.classList.add("incorrect");
+          }
+      
+          if (pronoun3.value.toLowerCase() === "us") {
+            result3.textContent = '✔️'; // Emoji "✔️" (Palomita verde)
+            result3.classList.add("correct");
+          } else {
+            result3.textContent = '❌'; // Emoji "❌" (X roja)
+            result3.classList.add("incorrect");
+          }
+      
+          // Get all result elements
+          const feedbackSpans = document.querySelectorAll('.result');
+      
+          // Check if at least one result is incorrect
+          const hasIncorrect = Array.from(feedbackSpans).some(span => span.classList.contains('incorrect'));
+      
+          // Get the result message element
+          if (!hasIncorrect) {
+            resultMessage.textContent = "All the answers are correct!";
+            resultMessage.classList.add("correct");
+          } else {
+            resultMessage.textContent = "At least one answer is incorrect. Review them.";
+            resultMessage.classList.add("incorrect");
+          }
+        };
+      </script>
+      
+</body>
+</html>

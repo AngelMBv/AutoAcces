@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap1.min.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <title>Plataforma Interactiva</title>
+</head>
+<body>
+<header>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><span class="logo-auto">Auto</span><span class="logo-acces">Acces</span></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="#">Games</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="banner1" id="activityBanner">
+    <h1 id="bannerText">Select Activity</h1>
+</div>
+<div class="cards">
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="img/topics/T1.jpeg" alt="wave" />
+    </div>
+    <div class="card-title">
+      <a href="" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Personal Pronoun
+          <small>I, you, he, she</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        Personal pronouns are words used to replace nouns and are an essential part of the English language.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="topic1.html" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="img/topics/T2.jpeg" alt="beach" />
+    </div>
+    <div class="card-title">
+      <a href="" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          To Be
+          <small>is, are</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        It is used to indicate the state, existence or identity of something or someone.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="topic2.html" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="img/topics/T3.jpeg" alt="mountain" />
+    </div>
+    <div class="card-title">
+      <a href="" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Wh-Questions
+          <small>what, who, why, where</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        These questions are used to obtain specific information about a topic and usually require more detailed answers.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="topic3.html" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?field" alt="field" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?water" alt="water" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image-holder">
+      <img class="card__image" src="https://source.unsplash.com/300x225/?river" alt="river" />
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+          Card title
+          <small>Image from unsplash.com</small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-description">
+        This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+      </div>
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+  <br><br>
+<!-- Banner -->
+<div class="banner" id="banner">
+    <div class="banner-content">
+        <p class="banner-text">Select a Game</p>
+    </div>
+</div>
+<br>
+<!--Cards-->
+<div class="cards1">
+    <div class="card1">
+        <img src="img/juego1.jpg" alt="Juego 1">
+        <div class="card1-info">
+            <h3>Game 1</h3>
+        </div>
+    </div>
+    <div class="card1">
+        <img src="img/juego2.jpg" alt="Juego 2">
+        <div class="card1-info">
+            <h3>Game 2</h3>
+        </div>
+    </div>
+    <div class="card1">
+        <img src="img/juego3.jpg" alt="Juego 3">
+        <div class="card1-info">
+            <h3>Game 3</h3>
+        </div>
+    </div>
+</div>
+<br>
+<!-- Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

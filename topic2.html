@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Verb "to be" in English</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    header {
+        background-color: rgb(255, 119, 0);
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+    
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    section {
+        margin-bottom: 20px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+    h2 {
+        color: #007BFF;
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    
+    h1, h2, th, td {
+        font-family: 'Arial', sans-serif;
+    }
+    img {
+            max-width: 100%;
+            height: 20px;
+        }
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#openModal {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#openModal:hover {
+    background-color: #0056b3;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Reducir el ancho al 50% */
+}
+
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#answer {
+    width: 100%;
+}
+
+#checkAnswers {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#checkAnswers:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para la retroalimentación de respuestas */
+#feedback1, #feedback2, #feedback3 {
+    color: red;
+}
+
+.correct {
+    color: green;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><span class="logo-auto">Auto</span><span class="logo-acces">Acces</span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#">Games</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction">
+            <div class="title">
+                <h1>The Verb "to be" </h1>
+            </div>
+            <h2>What is the Verb "to be"?</h2>
+            <p>The verb "to be" is one of the most important verbs in the English language. It is used to identify, describe, and state. Below, we explain its usage and provide examples in affirmative, negative, and interrogative forms.</p>
+        </section>
+
+        <section id="pronoun-table">
+            <h2>Combinations of Pronouns with "to be"</h2>
+            <table>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Singular Form</th>
+                    <th>Plural Form</th>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td>am</td>
+                    <td>are</td>
+                </tr>
+                <tr>
+                    <td>You</td>
+                    <td>are</td>
+                    <td>are</td>
+                </tr>
+                <tr>
+                    <td>He/She/It</td>
+                    <td>is</td>
+                    <td>are</td>
+                </tr>
+                <tr>
+                    <td>We</td>
+                    <td>are</td>
+                    <td>are</td>
+                </tr>
+                <tr>
+                    <td>They</td>
+                    <td>are</td>
+                    <td>are</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="examples">
+            <h2>Examples of "to be" in Action</h2>
+            <table>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Affirmative</th>
+                    <th>Negative</th>
+                    <th>Interrogative</th>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td><img src="img/topics/img/check.png" alt="Checkmark"> I am a student.</td>
+                    <td><img src="img/topics/img/cross.png" alt="Cross"> I am not a teacher.</td>
+                    <td><img src="img/topics/img/question.png" alt="Question Mark"> Am I late?</td>
+                </tr>
+                <tr>
+                    <td>You</td>
+                    <td><img src="img/topics/img/check.png" alt="Checkmark"> You are a friend.</td>
+                    <td><img src="img/topics/img/cross.png" alt="Cross"> You are not tired.</td>
+                    <td><img src="img/topics/img/question.png" alt="Question Mark"> Are you ready?</td>
+                </tr>
+                <tr>
+                    <td>He/She/It</td>
+                    <td><img src="img/topics/img/check.png" alt="Checkmark"> He is a doctor.</td>
+                    <td><img src="img/topics/img/cross.png" alt="Cross"> She is not a lawyer.</td>
+                    <td><img src="img/topics/img/question.png" alt="Question Mark"> Is it sunny?</td>
+                </tr>
+                <tr>
+                    <td>We</td>
+                    <td><img src="img/topics/img/check.png" alt="Checkmark"> We are students.</td>
+                    <td><img src="img/topics/img/cross.png" alt="Cross"> We are not tourists.</td>
+                    <td><img src="img/topics/img/question.png" alt="Question Mark"> Are we late?</td>
+                </tr>
+                <tr>
+                    <td>They</td>
+                    <td><img src="img/topics/img/check.png" alt="Checkmark"> They are explorers.</td>
+                    <td><img src="img/topics/img/cross.png" alt="Cross"> They are not afraid.</td>
+                    <td><img src="img/topics/img/question.png" alt="Question Mark"> Are they ready?</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="questions-negations">
+            <h2>Using "to be" in Questions and Negations</h2>
+            <p>To form questions with "to be," simply invert the order of the pronoun and the verb.</p>
+            <p>To make negations, add "not" after the verb "to be."</p>
+        </section>
+       <center> <button id="openModal">Open Activity</button></center>
+
+     <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Complete the sentences with 'to be'</h2>
+        <p>She <input type="text" id="answer1"> a teacher. <span id="feedback1"></span></p>
+        <p>They <input type="text" id="answer2"> my friends. <span id="feedback2"></span></p>
+        <p>We <input type="text" id="answer3"> students. <span id="feedback3"></span></p>
+      <center>  <button id="checkAnswers">Check</button></center>
+        <p id="results"></p>
+    </div>
+</div>
+
+        
+    </main>
+    <script>
+// Obtén elementos del DOM
+const openModalBtn = document.getElementById('openModal');
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('closeModal');
+const answerInputs = [
+    document.getElementById('answer1'),
+    document.getElementById('answer2'),
+    document.getElementById('answer3')
+];
+const feedbackSpans = [
+    document.getElementById('feedback1'),
+    document.getElementById('feedback2'),
+    document.getElementById('feedback3')
+];
+const checkAnswersBtn = document.getElementById('checkAnswers');
+const resultMessage = document.getElementById('results');
+
+// Abre el modal cuando se hace clic en el botón
+openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+    // Limpia los inputs y la retroalimentación al abrir el modal
+    for (let i = 0; i < answerInputs.length; i++) {
+        answerInputs[i].value = '';
+        feedbackSpans[i].textContent = '';
+    }
+});
+
+// Función para limpiar los campos y la retroalimentación
+function clearModalInputs() {
+    for (let i = 0; i < answerInputs.length; i++) {
+        answerInputs[i].value = '';
+        feedbackSpans[i].textContent = '';
+    }
+}
+
+// Abre el modal cuando se hace clic en el botón
+openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+    clearModalInputs(); // Limpia los inputs y la retroalimentación al abrir el modal
+});
+
+// Cierra el modal cuando se hace clic en la "X" o en el fondo oscuro
+function closeModal() {
+    modal.style.display = 'none';
+    clearModalInputs(); // Limpia los inputs y la retroalimentación al cerrar el modal
+}
+
+// Cierra el modal cuando se hace clic en la "X" o en el fondo oscuro
+function closeModal() {
+    modal.style.display = 'none';
+    clearModalInputs(); // Limpia los inputs y la retroalimentación al cerrar el modal
+    resultMessage.textContent = ''; // Borra el mensaje de resultado
+}
+
+closeModalBtn.addEventListener('click', closeModal);
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+
+// Verifica las respuestas cuando se hace clic en el botón de verificación
+checkAnswersBtn.addEventListener('click', () => {
+    const correctAnswers = ["is", "are", "are"]; // Respuestas correctas
+
+    for (let i = 0; i < answerInputs.length; i++) {
+        const userAnswer = answerInputs[i].value.trim().toLowerCase();
+        if (userAnswer === correctAnswers[i]) {
+            feedbackSpans[i].textContent = '✔️'; // Palomita verde
+            feedbackSpans[i].classList.add('correct');
+        } else {
+            feedbackSpans[i].textContent = '❌'; // "X" roja
+            feedbackSpans[i].classList.remove('correct');
+        }
+    }
+
+    // Comprueba si todas las respuestas son correctas
+    const allCorrect = feedbackSpans.every(span => span.classList.contains('correct'));
+    if (allCorrect) {
+        resultMessage.textContent = "All the answers are correct!";
+    } else {
+        resultMessage.textContent = "At least one answer is incorrect. Review them.";
+    }
+});
+
+    </script>
+</body>
+</html>

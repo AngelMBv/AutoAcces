@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Tarjetas</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #80deea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .window {
+            background: #0097a7;
+            border-radius: 4px;
+            overflow: hidden; /* Oculta las barras de desplazamiento */
+            padding: 20px;
+            height: 550px; /* Aumentamos la altura del contenedor */
+            max-width: 350px; /* Aumentamos el ancho máximo del contenedor */
+            width: 80%;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        ul li {
+            background: #fff;
+            border-radius: 4px; /* Aumentamos el radio para una apariencia más suave */
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            transition: transform 0.3s, box-shadow 0.3s; /* Agregamos transiciones para el hover */
+        }
+
+        ul li:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Sombreado más pronunciado en hover */
+            transform: scale(1.05); /* Efecto de zoom en hover */
+        }
+
+        ul li .image {
+            flex: 1; /* La imagen ocupa la mitad del espacio */
+            padding: 10px;
+            text-align: center; /* Centramos la imagen horizontalmente */
+        }
+
+        ul li .description {
+            flex: 1; /* La descripción ocupa la mitad del espacio */
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul li .description h3 {
+            text-align: center; /* Título centrado */
+            margin: 0;
+        }
+
+        ul li .description p {
+            padding: 10px;
+        }
+
+        .slide-in-left, .slide-in-right {
+            animation-timing-function: linear;
+        }
+
+        .slide-in-left {
+            animation: slide-in-left 3s;
+            transform: translate(-300px, 150px) rotate(-50deg);
+        }
+
+        .slide-in-right {
+            animation: slide-in-right 3s;
+            transform: translate(300px, 150px) rotate(50deg);
+        }
+
+        @keyframes slide-in-left {
+            0% {
+                transform: translate(-300px, 50px) rotate(-40deg);
+            }
+            25% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+            75% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+        }
+
+        @keyframes slide-in-right {
+            0% {
+                transform: translate(300px, -50px) rotate(-40deg);
+            }
+            25% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+            75% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .attribution {
+            color: #fefefe;
+            font-weight: 200;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        a {
+            color: #fefefe;
+        }
+        img{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main class="window">
+        <ul class="clean">
+            <li id="#" class="slide-in-left">
+                <div class="image">
+                    <img src="Sopa.jpeg" width="100px" height="100px" alt="Imagen 1">
+                </div>
+                <div class="description">
+                    <h3>Título 1</h3>
+                    <p>Descripción 1</p>
+                </div>
+            </li>
+            <li id="#" class="slide-in-left">
+                <div class="image">
+                    <img src="Sopa.jpeg" width="100px" height="100px" alt="Imagen 2">
+                </div>
+                <div class="description">
+                    <h3>Título 2</h3>
+                    <p>Descripción 2</p>
+                </div>
+            </li>
+            <li id="#" class="slide-in-right">
+                <div class="image">
+                    <img src="Sopa.jpeg" width="100px" height="100px" alt="Imagen 3">
+                </div>
+                <div class="description">
+                    <h3>Título 3</h3>
+                    <p>Descripción 3</p>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <script>
+        // JavaScript para aplicar estilos en línea después de la animación
+        const cards = document.querySelectorAll('.slide-in-left, .slide-in-right');
+        cards.forEach(card => {
+            card.addEventListener('animationend', () => {
+                card.style.animation = 'none'; // Detiene la animación
+                card.style.transform = 'translate(0, 0) rotate(0deg)'; // Establece la posición final
+            });
+        });
+    </script>
+</body>
+</html>
